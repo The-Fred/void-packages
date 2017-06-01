@@ -1,0 +1,36 @@
+# Template file for 'nanomsg'
+pkgname=nanomsg
+version=1.0.0
+revision=1
+short_desc='Simple, high-performance implementation of "scalability protocols"'
+homepage='http://nanomsg.org/'
+license="MIT"
+depends="glibc"
+makedepends="cmake"
+build_style="cmake"
+shlib_provides="lib${pkgname}.so.5.0.0"
+nocross="yes"
+distfiles="https://github.com/nanomsg/nanomsg/archive/$version.tar.gz>nanomsg-${version}.tar.gz"
+checksum="24afdeb71b2e362e8a003a7ecc906e1b84fd9f56ce15ec567481d1bb33132cc7"
+
+pre_configure() {
+	configure_args="-DCMAKE_INSTALL_PREFIX=/usr"
+}
+
+do_build() {
+	cd $wrksrc/build
+	cmake --build .
+}
+post_build() {
+	cd $wrksrc/build
+	ctest
+}
+
+do_install() {
+	cd $wrksrc/build
+	DESTDIR=${DESTDIR} cmake --build . --target install
+}
+
+post_install() {
+	vlicense COPYING
+}
