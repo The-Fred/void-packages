@@ -5,14 +5,9 @@ revision=1
 short_desc='Simple, high-performance implementation of "scalability protocols"'
 homepage='http://nanomsg.org/'
 license="MIT"
-hostmakedepends="cmake"
 build_style=cmake
-shlib_provides="lib${pkgname}.so.5.0.0"
-nocross="https://travis-ci.org/voidlinux/void-packages/jobs/238104905"
 distfiles="https://github.com/nanomsg/nanomsg/archive/$version.tar.gz>nanomsg-${version}.tar.gz"
 checksum="24afdeb71b2e362e8a003a7ecc906e1b84fd9f56ce15ec567481d1bb33132cc7"
-
-configure_args="-DCMAKE_INSTALL_PREFIX=/usr"
 
 post_build() {
 	ctest
