@@ -3,7 +3,7 @@ pkgname=edbrowse
 version=3.6.3
 revision=1
 hostmakedepends="pkg-config perl"
-build_style="cmake"
+build_style=cmake
 makedepends="mozjs24-devel libressl-devel pcre-devel libcurl-devel
  readline-devel libtidy5-devel"
 short_desc="Line-oriented text editor, web browser and mail client similar to ed(1)"
