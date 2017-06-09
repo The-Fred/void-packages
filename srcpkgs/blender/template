@@ -2,7 +2,7 @@
 pkgname=blender
 version=2.78c
 revision=4
-build_style="cmake"
+build_style=cmake
 makedepends="
  libgomp-devel libpng-devel tiff-devel python3-devel glu-devel
  glew-devel freetype-devel jack-devel libopenal-devel libsndfile-devel
