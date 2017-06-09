@@ -2,7 +2,7 @@
 pkgname="cpputest"
 version="3.8"
 revision=1
-build_style="cmake"
+build_style=cmake
 short_desc="CppUTest unit testing and mocking framework for C/C++"
 maintainer="Julien Dehos <dehos@lisic.univ-littoral.fr>"
 homepage="http://cpputest.github.io/"
