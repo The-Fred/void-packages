@@ -1,0 +1,14 @@
+# Template file for 'LimeSuite'
+pkgname=LimeSuite
+version=17.06.0
+revision=1
+build_style=cmake
+makedepends="SoapySDR
+libusb-devel wxWidgets-devel i2c-tools
+libfreeglut-devel sqlite-devel"
+depends="SoapySDR i2c-tools"
+short_desc="Multi-purpose application and driver for Lime/MyriadRF SDR Hardware"
+license="Apache-2.0"
+homepage="https://github.com/myriadrf/LimeSuite.git"
+distfiles="https://github.com/myriadrf/LimeSuite/archive/v${version}.tar.gz"
+checksum=615014ec946bfa837877d4c9e6968d44446a55f3357f53d713ffa3a7b2ed428e

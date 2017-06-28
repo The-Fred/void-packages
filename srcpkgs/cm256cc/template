@@ -1,0 +1,12 @@
+# Template file for 'cm256cc'
+pkgname='cm256cc'
+version=1.0.0
+revision=1
+license="GPL-3"
+wrksrc=${pkgname}-master
+makedepends="boost-devel"
+build_style=cmake
+short_desc="Fast GF(256) Cauchy MDS Block Erasure Codec in C++"
+homepage="https://github.com/f4exb/cm256cc"
+distfiles="https://github.com/f4exb/cm256cc/archive/master.tar.gz>cm256cc.tar.gz"
+checksum=102c89f833c17716fad0177d4bc40a1c1cba01b070cbb67055427ac957de25b4

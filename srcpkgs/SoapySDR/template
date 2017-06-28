@@ -1,0 +1,29 @@
+# Template file for 'SoapySDR'
+pkgname=SoapySDR
+version=0.6.0
+revision=1
+wrksrc=${pkgname}-master
+build_style=cmake
+makedepends="python3 cmake swig python3-numpy python3-devel"
+depends="python3 python3-numpy"
+shlib_provides="lib${pkgname}.so.0.6"
+short_desc="SoapySDR hardware agnostic driver."
+maintainer="Main Tainer <you@example.com>"
+license="Boost Software License 1.0"
+homepage="https://github.com/pothosware/${pkgname}"
+distfiles="https://github.com/pothosware/${pkgname}/archive/master.tar.gz>${pkgname}.tar.gz"
+checksum=b36a95fbbe6be944a13d9257cdaef551bb703e3950bd34281002f1ba4f590436
+
+# Template file for 'SoapySDR'
+pkgname=SoapySDR
+version=0.6.0
+revision=1
+wrksrc=${pkgname}-master
+build_style=cmake
+makedepends="python3 swig python3-numpy python3-devel"
+depends="python3 python3-numpy"
+short_desc="SoapySDR hardware neutral driver."
+license="Boost Software License 1.0"
+homepage="https://github.com/pothosware/${pkgname}"
+distfiles="https://github.com/pothosware/${pkgname}/archive/master.tar.gz>${pkgname}.tar.gz"
+checksum=c80dd0bd087a6420fd95f4dadf7de1c5a3983f8f04e9091276d76289d54909b0

@@ -1,0 +1,23 @@
+# Template file for 'SDRangel'
+pkgname=SDRangel
+version=3.5.0
+revision=1
+short_desc='Rx/Tx software for many SDR hardware platforms.'
+homepage='https://github.com/f4exb/sdrangel'
+license="GPL-3"
+hostmakedepends="cmake pkg-config nanomsg LimeSuite"
+depends="LimeSuite nanomsg qt5"
+makedepends="
+LimeSuite pkg-config nanomsg cm256cc pulseaudio-devel
+libstdc++-devel qt5-devel libopencv-devel libusb-devel
+alsa-lib-devel fftw-devel libgcc libGL sqlite-devel
+qt5-multimedia qt5-multimedia-devel boost-devel"
+build_style=cmake
+distfiles="https://github.com/f4exb/sdrangel/archive/v${version}.tar.gz>${pkgname}-${version}.tar.gz"
+checksum=aef344a2e446b0c6cb58c1c91d953465ca1558ef07b85351d556f72572edb88c
+
+post_extract() {
+        echo "XBPS_BUILDDIR = $XBPS_BUILDDIR"
+        mv $XBPS_BUILDDIR/sdrangel-${version} $XBPS_BUILDDIR/${pkgname}-${version}
+}
+
